@@ -39,7 +39,7 @@ export default {
     sourcemap: true,
     format: "iife",
     name: "app",
-    file: "public/build/dice-tray.js",
+    file: "build/dice-tray.js",
   },
   plugins: [
     svelte({
