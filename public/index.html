@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Svelte app</title>
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/build/dice-tray.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script defer src="/build/dice-tray.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="game-window"></div>
+        <div class="side-tab">
+          <div id="chat-log"></div>
+          <div id="chat-controls">
+            <div class="chat-control-icon"></div>
+          </div>
+          <div id="chat-form">
+            <textarea name="chat-message" id="chat-message"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

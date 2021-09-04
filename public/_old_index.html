@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundry Skeleton</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="game-window"></div>
+        <div class="side-tab">
+          <div id="chat-log"></div>
+          <div id="chat-controls">
+            <div class="chat-control-icon"></div>
+          </div>
+          <div id="chat-form">
+            <textarea name="chat-message" id="chat-message"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const msg = "Hello, World!";
+      $.get(
+        "../templates/Header.html",
+        (data) => {
+          const template = Handlebars.compile(data);
+          $("#chat-form").after(template({ msg }));
+        },
+        "html"
+      );
+    </script>
+  </body>
+</html>
