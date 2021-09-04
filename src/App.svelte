@@ -15,7 +15,18 @@
   let isVisible = false;
 
   function handleInputInput(event) {
-    dicePool.setMod(event.target.value);
+    const value = event.target.value;
+    if (value > 99) {
+      dicePool.setMod(99);
+      event.target.value = 99;
+      return;
+    }
+    if (value < -99) {
+      dicePool.setMod(-99);
+      event.target.value = -99;
+      return;
+    }
+    dicePool.setMod(value);
   }
   function handleInputKeydown(event) {
     if ({ ArrowLeft: 1, ArrowDown: 1 }[event.key]) {
@@ -138,16 +149,18 @@
   }
 
   :global(#dnd5e-simple-dice-tray) {
-    // max-height: 94px;
     flex: unset;
   }
 
   #dice-tray-container {
+    $dice-tray-grey-high: rgba(255, 255, 255, 0.87);
+    $dice-tray-grey-medium: rgba(255, 255, 255, 0.6);
+    $dice-tray-grey-low: rgba(255, 255, 255, 0.38);
     $dice-tray-red: #842029;
     padding: 5px;
 
     :global(*) {
-      color: rgba(255, 255, 255, 0.87);
+      color: $dice-tray-grey-high;
     }
 
     #dice-btn-row {
@@ -162,13 +175,26 @@
       grid-template-columns: repeat(4, 25%);
 
       .dice-tray-input-container {
+        &::before {
+          content: "";
+          position: absolute;
+          border: 1px solid $dice-tray-grey-low;
+          border-radius: 0.25rem;
+          top: 50%;
+          left: 33%;
+          width: 50%;
+          height: 75%;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+        }
+
         #dice-tray-roll-mod {
           width: 100%;
           height: 100%;
           background-color: transparent;
           border: 0;
-          padding-right: 0.675rem;
-          text-align: center;
+          text-align: left;
+          padding-left: 1rem;
 
           /* Chrome, Safari, Edge, Opera */
           &::-webkit-outer-spin-button,
@@ -250,6 +276,14 @@
 
       &:hover::after {
         opacity: 16%;
+      }
+
+      &:focus {
+        box-shadow: 0 0 5px red;
+
+        &::after {
+          opacity: 23%;
+        }
       }
     }
   }
