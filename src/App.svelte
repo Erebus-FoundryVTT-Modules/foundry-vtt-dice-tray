@@ -4,15 +4,16 @@
   import { slide } from "svelte/transition";
   import { chatString, dicePool, khl } from "./store";
   import DiceBtn from "./components/DiceBtn.svelte";
-  const dice = [4, 6, 8, 10, 12, 20, 100];
 
+  export let isVisible = false;
+
+  const dice = [4, 6, 8, 10, 12, 20, 100];
   const enterEvent = jQuery.Event("keydown");
   enterEvent.which = 13;
   enterEvent.keycode = 13;
   enterEvent.code = "Enter";
   enterEvent.key = "Enter";
   let chatMessage;
-  let isVisible = false;
 
   function handleInputInput(event) {
     const value = event.target.value;
