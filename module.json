@@ -9,7 +9,8 @@
   "compatibleCoreVersion": "0.8.9",
   "dependencies": [
     {
-      "name": "foundry-vtt-feather-icons"
+      "name": "foundry-vtt-feather-icons",
+      "manifest": "https://raw.githubusercontent.com/BrettLargent/foundry-vtt-feather-icons/main/module.json"
     }
   ],
   "scripts": ["./build/dice-tray.js", "./build/dice-tray.map.js"],
