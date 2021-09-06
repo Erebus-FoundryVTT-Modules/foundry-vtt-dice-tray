@@ -1,5 +1,4 @@
 <script>
-  import feather from "feather-icons";
   import { onMount, onDestroy, tick } from "svelte";
   import { slide } from "svelte/transition";
   import { chatString, dicePool, khl } from "./store";
