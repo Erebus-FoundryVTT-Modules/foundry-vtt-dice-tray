@@ -103,15 +103,15 @@
       {/each}
     </div>
     <div id="dice-actions-row">
-      <button class="dice-tray-btn" on:click={handleRollClick}>Roll</button>
+      <button class="dice-tray-btn" on:click={dicePool.clear}>Clear</button>
       <div class="dice-tray-kh-kl-container">
         <button
           class="dice-tray-btn {$khl === 'kh' ? 'active' : ''}"
-          on:click={() => handleKhl("kh")}>kh</button
+          on:click={() => handleKhl("kh")}>Adv</button
         >
         <button
           class="dice-tray-btn {$khl === 'kl' ? 'active' : ''}"
-          on:click={() => handleKhl("kl")}>kl</button
+          on:click={() => handleKhl("kl")}>dAdv</button
         >
       </div>
       <div
@@ -139,7 +139,7 @@
           <i data-feather="chevron-down" />
         </div>
       </div>
-      <button class="dice-tray-btn" on:click={dicePool.clear}>Clear</button>
+      <button class="dice-tray-btn" on:click={handleRollClick}>Roll</button>
     </div>
   </div>{/if}
 
