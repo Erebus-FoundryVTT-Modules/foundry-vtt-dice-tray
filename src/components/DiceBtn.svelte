@@ -23,15 +23,11 @@
   on:keyup={handleKeyup}
   on:wheel={handleWheelEvent}
 >
-  {#if die == 100}
-    100
-  {:else}
-    <svg width="20" height="20">
-      <use
-        xlink:href="modules/dnd5e-simple-dice-tray/assets/dice-sprite.svg#d{die}"
-      />
-    </svg>
-  {/if}
+  <svg class="die-svg" width="20" height="20">
+    <use
+      xlink:href="modules/dnd5e-simple-dice-tray/assets/dice-sprite.svg#d{die}"
+    />
+  </svg>
 </button>
 
 <style lang="scss">
@@ -39,5 +35,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .die-svg {
+    fill: #aaa;
+    stroke: #000;
+    stroke-width: 2;
   }
 </style>
