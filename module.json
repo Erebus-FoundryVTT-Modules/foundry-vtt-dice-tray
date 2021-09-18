@@ -4,7 +4,7 @@
   "description": "Adds a simple dice tray below chat that can be shown/hidden by clicking on the d20 in the upper left of the chat box.",
   "author": "blargent",
   "url": "https://github.com/BrettLargent/dnd5e-simple-dice-tray",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "minimumCoreVersion": "0.7.5",
   "compatibleCoreVersion": "0.8.9",
   "dependencies": [
