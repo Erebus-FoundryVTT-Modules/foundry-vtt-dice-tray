@@ -1,6 +1,21 @@
 <script>
+  import D4 from "./D4.svelte";
+  import D6 from "./D6.svelte";
+  import D8 from "./D8.svelte";
+  import D10 from "./D10.svelte";
+  import D12 from "./D12.svelte";
+  import D20 from "./D20.svelte";
   import { dicePool } from "../store";
   export let die;
+
+  const dieMap = {
+    4: D4,
+    6: D6,
+    8: D8,
+    10: D10,
+    12: D12,
+    20: D20,
+  };
 
   function handleKeyup({ key }) {
     if ({ Delete: 1, Backspace: 1 }[key]) {
@@ -24,42 +39,16 @@
   on:wheel={handleWheelEvent}
 >
   {#if die == 100}
-    {die}
+    100
+  {:else}
+    <svelte:component this={dieMap[die]} />
   {/if}
 </button>
 
 <style lang="scss">
   .dice-tray-btn {
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    &.d4 {
-      background-image: url("../icons/d4.svg");
-    }
-
-    &.d6 {
-      background-image: url("../icons/d6.svg");
-    }
-
-    &.d8 {
-      background-image: url("../icons/d8.svg");
-    }
-
-    &.d10 {
-      background-image: url("../icons/d10.svg");
-    }
-
-    &.d12 {
-      background-image: url("../icons/d12.svg");
-    }
-
-    &.d20 {
-      background-image: url("../icons/d20.svg");
-    }
-
-    // &.d100 {
-    //   background-image: url("/icons/d6.svg");
-    // }
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
