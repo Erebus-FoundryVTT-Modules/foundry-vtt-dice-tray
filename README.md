@@ -33,3 +33,11 @@ The **Roll** button will submit the dice in your tray and roll them to the chat 
 <image align="right" src="./assets/dice-tray-collapse.gif" style="padding-left: 1rem;" />
 
 The dice tray can be collapsed at any time to free up space in your window. This is done by left-clicking on the `.chat-control-icon` - the d20 just above the chat message textarea.
+
+---
+
+## Dependencies
+
+- Foundry VTT Feather Icons
+  - manifest: https://raw.githubusercontent.com/BrettLargent/foundry-vtt-feather-icons/main/module.json
+  - url: https://github.com/BrettLargent/foundry-vtt-feather-icons
