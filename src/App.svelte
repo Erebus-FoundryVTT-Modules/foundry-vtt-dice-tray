@@ -148,7 +148,7 @@
     cursor: pointer;
   }
 
-  :global(#dnd5e-simple-dice-tray) {
+  :global(#foundry-vtt-dice-tray) {
     flex: unset;
   }
 

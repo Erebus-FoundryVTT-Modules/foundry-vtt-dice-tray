@@ -25,7 +25,7 @@
 >
   <svg class="die-svg" width="20" height="20">
     <use
-      xlink:href="modules/dnd5e-simple-dice-tray/assets/dice-sprite.svg#d{die}"
+      xlink:href="modules/foundry-vtt-dice-tray/assets/dice-sprite.svg#d{die}"
     />
   </svg>
 </button>
