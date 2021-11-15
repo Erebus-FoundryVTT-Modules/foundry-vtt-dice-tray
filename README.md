@@ -39,5 +39,5 @@ The dice tray can be collapsed at any time to free up space in your window. This
 ## Dependencies
 
 - Foundry VTT Feather Icons
-  - manifest: https://raw.githubusercontent.com/BrettLargent/foundry-vtt-feather-icons/main/module.json
-  - url: https://github.com/BrettLargent/foundry-vtt-feather-icons
+  - manifest: https://raw.githubusercontent.com/Erebus-FoundryVTT-Modules/foundry-vtt-feather-icons/main/module.json
+  - url: https://github.com/Erebus-FoundryVTT-Modules/foundry-vtt-feather-icons
