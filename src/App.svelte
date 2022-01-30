@@ -12,6 +12,7 @@
   enterEvent.keycode = 13;
   enterEvent.code = "Enter";
   enterEvent.key = "Enter";
+  enterEvent.originalEvent = new Event("keydown");
   let chatMessage;
 
   function handleInputInput(event) {
