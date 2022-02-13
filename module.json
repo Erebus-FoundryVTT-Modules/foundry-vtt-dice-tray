@@ -4,7 +4,7 @@
   "description": "Adds a simple dice tray below chat that can be shown/hidden by clicking on the d20 in the upper left of the chat box.",
   "author": "blargent",
   "url": "https://github.com/Erebus-FoundryVTT-Modules/foundry-vtt-dice-tray",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "minimumCoreVersion": "0.7.5",
   "compatibleCoreVersion": "9.245",
   "dependencies": [
