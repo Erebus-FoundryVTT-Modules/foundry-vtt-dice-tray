@@ -1,20 +1,25 @@
 {
-  "name": "foundry-vtt-dice-tray",
+  "id": "foundry-vtt-dice-tray",
   "title": "Foundry VTT Dice Tray",
   "description": "Adds a simple dice tray below chat that can be shown/hidden by clicking on the d20 in the upper left of the chat box.",
-  "author": "blargent",
   "url": "https://github.com/Erebus-FoundryVTT-Modules/foundry-vtt-dice-tray",
-  "version": "1.1.3",
-  "minimumCoreVersion": "0.7.5",
-  "compatibleCoreVersion": "9.245",
-  "dependencies": [
-    {
-      "name": "foundry-vtt-feather-icons",
-      "manifest": "https://raw.githubusercontent.com/Erebus-FoundryVTT-Modules/foundry-vtt-feather-icons/main/module.json"
-    }
-  ],
-  "scripts": ["./build/dice-tray.js"],
-  "styles": ["./build/dice-tray.css"],
+  "version": "1.1.4",
+  "compatibility": {
+    "minimum": "0.7.5",
+    "verified": "11"
+  },
+  "relationships": {
+    "requires": [
+      {
+        "id": "foundry-vtt-feather-icons",
+        "manifest": "https://raw.githubusercontent.com/Erebus-FoundryVTT-Modules/foundry-vtt-feather-icons/main/module.json",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "scripts": ["build/dice-tray.js"],
+  "styles": ["build/dice-tray.css"],
   "manifest": "https://raw.githubusercontent.com/Erebus-FoundryVTT-Modules/foundry-vtt-dice-tray/main/module.json",
   "download": "https://github.com/Erebus-FoundryVTT-Modules/foundry-vtt-dice-tray/archive/refs/heads/main.zip"
 }
